@@ -26,7 +26,6 @@ function draw() {
     pos = width;
   }
   
-  // 물체 그리기
   ellipse(pos, height / 2, 20, 20);
 }
 
