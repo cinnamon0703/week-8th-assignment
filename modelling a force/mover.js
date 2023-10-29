@@ -47,7 +47,7 @@ class Mover {
     }
     if (this.position.y > height - this.radius) {
       this.position.y = height - this.radius;
-      this.velocity.y *= bounce;
+      this.velocity.y *= 0;
     }
   }
 
