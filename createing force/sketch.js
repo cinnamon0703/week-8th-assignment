@@ -38,3 +38,5 @@ function draw() {
   moverB.display();
   moverB.checkEdges();
 }
+
+// 이게 아닌데.... 다르게 생각해봐야 하나...
