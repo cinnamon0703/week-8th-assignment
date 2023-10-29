@@ -9,7 +9,6 @@ function setup() {
 function draw() {
   background(220);
   
-  
   if (isMousePressed) {
     vel = vel * 0.95; 
   } else {
