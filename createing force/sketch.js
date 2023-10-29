@@ -25,7 +25,7 @@ function draw() {
     moverA.applyForce(wind);
     moverB.applyForce(wind);
   } else {
-    let counter = createVector(-0.1, 0);
+    let counter = createVector(-0.01, 0);
     moverA.applyForce(counter);
     moverB.applyForce(counter);
   }
