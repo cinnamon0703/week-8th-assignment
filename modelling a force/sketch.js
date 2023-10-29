@@ -13,9 +13,9 @@ function setup() {
 function draw() {
   background(255);
 
-  // let gravity = createVector(0, 1);
-  // //{!1} I should scale by mass to be more accurate, but this example only has one circle
-  // mover.applyForce(gravity);
+  let gravity = createVector(0, 1);
+  //{!1} I should scale by mass to be more accurate, but this example only has one circle
+  mover.applyForce(gravity);
 
   if (mouseIsPressed) {
     let wind = createVector(0.5, 0);
@@ -24,11 +24,10 @@ function draw() {
 
   if (mover.contactEdge()) {
     //{!5 .bold}
-    let c = 1;
+    let c = 0.1;
     let friction = mover.velocity.copy();
     friction.mult(-1);
     friction.setMag(c);
-    // 여기서 c가 마찰계수일까 -1이 마찰계수일까
 
     //{!1 .bold} Apply the friction force vector to the object.
     mover.applyForce(friction);
@@ -38,4 +37,3 @@ function draw() {
   mover.update();
   mover.show();
 }
-

@@ -26,13 +26,13 @@ class Mover {
     stroke(0);
     strokeWeight(2);
     fill(127, 127);
-    circle(this.position.x, 240-this.radius, this.radius * 2);
+    circle(this.position.x, this.position.y, this.radius * 2);
   }
 
-  // contactEdge() {
-  //   // The mover is touching the edge when it's within one pixel
-  //   return (this.position.y > height - this.radius - 1);
-  // }
+  contactEdge() {
+    // The mover is touching the edge when it's within one pixel
+    return (this.position.y > height - this.radius - 1);
+  }
 
   bounceEdges() {
     // A new variable to simulate an inelastic collision
@@ -45,10 +45,10 @@ class Mover {
       this.position.x = this.radius;
       this.velocity.x *= bounce;
     }
-    // if (this.position.y > height - this.radius) {
-    //   this.position.y = height - this.radius;
-    //   this.velocity.y *= bounce;
-    // } 안돼겠다 그냥이 튀기는 걸 없애버려야지
+    if (this.position.y > height - this.radius) {
+      this.position.y = height - this.radius;
+      this.velocity.y *= bounce;
+    }
   }
 
 }
