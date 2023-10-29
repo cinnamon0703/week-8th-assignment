@@ -24,9 +24,9 @@ function draw() {
 
   if (mover.contactEdge()) {
     //{!5 .bold}
-    let c = 2;
+    let c = 0.1;
     let friction = mover.velocity.copy();
-    friction.mult(-1);
+    friction.mult(-10);
     friction.setMag(c);
     // 여기서 c가 마찰계수일까 -1이 마찰계수일까
 
