@@ -25,10 +25,11 @@ function draw() {
     moverA.applyForce(wind);
     moverB.applyForce(wind);
   } else {
-    let counter = createVector(-0.01, 0);
-    moverA.applyForce(counter);
-    moverB.applyForce(counter);
+    let counter =0.01
+    moverA.velocity.x = moverA.velocity.x * (1 - counter); 
+    moverB.velocity.x = moverB.velocity.x * (1 - counter);
   }
+  
 
   moverA.update();
   moverA.display();
@@ -39,4 +40,3 @@ function draw() {
   moverB.checkEdges();
 }
 
-// 이게 아닌데.... 다르게 생각해봐야 하나...
