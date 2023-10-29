@@ -24,7 +24,7 @@ function draw() {
 
   if (mover.contactEdge()) {
     //{!5 .bold}
-    let c = 0.1;
+    let c = 10;
     let friction = mover.velocity.copy();
     friction.mult(-1);
     friction.setMag(c);
