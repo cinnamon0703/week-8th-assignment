@@ -13,9 +13,9 @@ function setup() {
 function draw() {
   background(255);
 
-  let gravity = createVector(0, 1);
-  //{!1} I should scale by mass to be more accurate, but this example only has one circle
-  mover.applyForce(gravity);
+  // let gravity = createVector(0, 1);
+  // //{!1} I should scale by mass to be more accurate, but this example only has one circle
+  // mover.applyForce(gravity);
 
   if (mouseIsPressed) {
     let wind = createVector(0.5, 0);
@@ -24,7 +24,7 @@ function draw() {
 
   if (mover.contactEdge()) {
     //{!5 .bold}
-    let c = 2;
+    let c = 0.1;
     let friction = mover.velocity.copy();
     friction.mult(-1);
     friction.setMag(c);

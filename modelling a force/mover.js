@@ -26,7 +26,7 @@ class Mover {
     stroke(0);
     strokeWeight(2);
     fill(127, 127);
-    circle(this.position.x, this.position.y, this.radius * 2);
+    circle(this.position.x, 240-this.radius, this.radius * 2);
   }
 
   contactEdge() {
@@ -45,10 +45,10 @@ class Mover {
       this.position.x = this.radius;
       this.velocity.x *= bounce;
     }
-    if (this.position.y > height - this.radius) {
-      this.position.y = height - this.radius;
-      this.velocity.y *= bounce;
-    }
+    // if (this.position.y > height - this.radius) {
+    //   this.position.y = height - this.radius;
+    //   this.velocity.y *= bounce;
+    // } 안돼겠다 그냥이 튀기는 걸 없애버려야지
   }
 
 }
