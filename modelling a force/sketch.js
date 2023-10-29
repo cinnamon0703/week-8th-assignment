@@ -28,6 +28,7 @@ function draw() {
     let friction = mover.velocity.copy();
     friction.mult(-1);
     friction.setMag(c);
+    // 여기서 c가 마찰계수일까 -1이 마찰계수일까
 
     //{!1 .bold} Apply the friction force vector to the object.
     mover.applyForce(friction);
@@ -37,3 +38,4 @@ function draw() {
   mover.update();
   mover.show();
 }
+
