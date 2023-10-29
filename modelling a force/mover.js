@@ -29,10 +29,10 @@ class Mover {
     circle(this.position.x, 240-this.radius, this.radius * 2);
   }
 
-  contactEdge() {
-    // The mover is touching the edge when it's within one pixel
-    return (this.position.y > height - this.radius - 1);
-  }
+  // contactEdge() {
+  //   // The mover is touching the edge when it's within one pixel
+  //   return (this.position.y > height - this.radius - 1);
+  // }
 
   bounceEdges() {
     // A new variable to simulate an inelastic collision
